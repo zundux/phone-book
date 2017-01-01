@@ -1,5 +1,5 @@
 <div *ngIf="hero">
-  <form (submit)="name.pristine ? goBack() : save()">
+  <form (submit)="name.pristine ? false : save()">
     <h2>{{hero.name}} details!</h2>
     <div><label>id: </label>{{hero.id}}</div>
     <div>
@@ -7,6 +7,6 @@
       <input [(ngModel)]="hero.name" #name="ngModel" name="name" placeholder="name" minlength="1" required/>
     </div>
     <button (click)="goBack()">Back</button>
-    <button type="submit">Save</button>
+    <button [disabled]="name.pristine" type="submit">Save</button>
   </form>
 </div>
