@@ -1,9 +1,12 @@
 <div *ngIf="hero">
-  <h2>{{hero.name}} details!</h2>
-  <div><label>id: </label>{{hero.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name"/>
-  </div>
-  <button (click)="goBack()">Back</button>
+  <form (submit)="name.pristine ? goBack() : save()">
+    <h2>{{hero.name}} details!</h2>
+    <div><label>id: </label>{{hero.id}}</div>
+    <div>
+      <label>name: </label>
+      <input [(ngModel)]="hero.name" #name="ngModel" name="name" placeholder="name" minlength="1" required/>
+    </div>
+    <button (click)="goBack()">Back</button>
+    <button type="submit">Save</button>
+  </form>
 </div>
