@@ -20,6 +20,9 @@ import { AppState } from './app.service';
   ],
   template: `
     <nav>
+      <a [routerLink]=" ['./peoples'] " routerLinkActive="active">
+        Peoples
+      </a>
       <a [routerLink]=" ['./'] " routerLinkActive="active">
         Index
       </a>
@@ -47,7 +50,7 @@ import { AppState } from './app.service';
       <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
       <div>
         <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
+          <img [src]="angularclassLogo" width="50px">
         </a>
       </div>
     </footer>
@@ -56,7 +59,7 @@ import { AppState } from './app.service';
 export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/angularclass-avatar.png';
   public name = 'Angular 2 Webpack Starter';
-  public url = 'https://twitter.com/AngularClass';
+  public url = 'https://github.com/AngularClass/angular2-webpack-starter';
 
   constructor(
     public appState: AppState
