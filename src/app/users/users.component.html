@@ -1,4 +1,4 @@
-<script src="heroes.component.ts"></script><h2>My Heroes</h2>
+<h2>My Heroes</h2>
 
 <div>
   <form (submit)="add(heroName.value); heroName.value=''">
@@ -28,3 +28,17 @@
   </h2>
   <button (click)="gotoDetail()">View Details</button>
 </div>
+
+
+
+<h1>users</h1>
+<div>
+  For hot module reloading run
+  <pre>npm run start:hmr</pre>
+</div>
+<div>
+  <h3>
+    patrick@AngularClass.com
+  </h3>
+</div>
+<pre>this.localState = {{ localState | json }}</pre>

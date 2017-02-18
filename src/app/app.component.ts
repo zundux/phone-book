@@ -20,8 +20,8 @@ import { AppState } from './app.service';
   ],
   template: `
     <nav>
-      <a [routerLink]=" ['./peoples'] " routerLinkActive="active">
-        Peoples
+      <a [routerLink]=" ['./users'] " routerLinkActive="active">
+        users
       </a>
       <a [routerLink]=" ['./'] " routerLinkActive="active">
         Index
