@@ -3,7 +3,7 @@ import 'rxjs/add/operator/toPromise';
 import { Injectable }     from '@angular/core';
 import { Headers, Http }  from '@angular/http';
 
-import { User } from './user';
+import { User } from '../model/user';
 
 @Injectable()
 export class UserService {
@@ -54,7 +54,7 @@ export class UserService {
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
+    console.error('An error occurred', error); // todo for demo purposes only
     return Promise.reject(error.message || error);
   }
 }
