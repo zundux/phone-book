@@ -26,7 +26,9 @@
   <h2>
     {{selectedUser.name | uppercase}} is my user
   </h2>
-  <button (click)="gotoDetail()">View Details</button>
+  <button
+    [routerLink]=" ['./user-detail', selectedUser.id] "
+  >View Details</button>
 </div>
 
 <hr>

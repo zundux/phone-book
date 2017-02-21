@@ -8,8 +8,7 @@ import { UserService } from '../core/service/user.service';
 import { User } from '../core/model/user';
 
 @Component({
-  moduleId: module.id,
-  selector: 'my-user-detail',
+  selector: 'user-detail',
   templateUrl: 'user-detail.component.html',
   styleUrls: ['user-detail.component.css']
 })
@@ -28,6 +27,7 @@ export class UserDetailComponent implements OnInit {
   }
 
   goBack(): void {
+    // todo check transition and return from different levels of pages
     this.location.back();
   }
 

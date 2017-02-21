@@ -1,0 +1,26 @@
+<div *ngIf="user">
+  <form (submit)="name.pristine ? false : save()">
+    <h2>{{user.name}} details!</h2>
+    <div>
+      <label>id: </label>{{user.id}}
+    </div>
+    <div>
+      <label>name: </label>
+      <input [(ngModel)]="user.name"
+             #name="ngModel"
+             name="name"
+             placeholder="name"
+             minlength="1"
+             required/>
+    </div>
+    <button (click)="goBack()">Back</button>
+    <button [disabled]="name.pristine" type="submit">Save</button>
+  </form>
+</div>
+
+<span>
+  <a [routerLink]=" ['./child-user-detail'] ">
+    User Child Detail
+  </a>
+</span>
+<router-outlet></router-outlet>

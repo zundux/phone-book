@@ -31,9 +31,9 @@ export class UsersComponent implements OnInit {
   }
 
 
-  gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedUser.id]);
-  }
+  // gotoDetail(): void {
+  //   this.router.navigate(['/user-detail', this.selectedUser.id]);
+  // }
 
   add(name: string): void {
     name = name.trim();
