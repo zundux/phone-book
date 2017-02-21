@@ -1,0 +1,50 @@
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+.users {
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.users li {
+  cursor: pointer;
+  position: relative;
+  background-color: #EEE;
+  vertical-align: middle;
+  border-bottom: 1px solid #d8d8d8;
+}
+.users li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.users li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  border-left: 0.2em solid #607d8b;
+}
+.users .text {
+  position: relative;
+  top: -3px;
+}
+.users .badge {
+  display: inline-block;
+  margin-right: 0.2em;
+  position: relative;
+  line-height: 2em;
+  padding: 0 .5em;
+  color: #607D8B;
+}
+button.delete {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1em;
+  font-weight: bold;
+  display: inline-block;
+  float: right;
+  padding: .4em .6em .4em .6em;
+  overflow: hidden;
+}
+

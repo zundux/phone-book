@@ -1,4 +1,4 @@
-<h2>My Users</h2>
+<h1>Users</h1>
 
 <div>
   <form (submit)="add(userName.value); userName.value=''">
@@ -17,7 +17,7 @@
     <span class="badge">{{user.id}}</span>
     <span>{{user.name}}</span>
     <button class="delete"
-            (click)="delete(user); $event.stopPropagation()">x
+            (click)="remove(user); $event.stopPropagation()">x
     </button>
   </li>
 </ul>
@@ -29,16 +29,11 @@
   <button (click)="gotoDetail()">View Details</button>
 </div>
 
+<hr>
+<hr>
 
-
-<h1>users</h1>
 <div>
   For hot module reloading run
   <pre>npm run start:hmr</pre>
-</div>
-<div>
-  <h3>
-    patrick@AngularClass.com
-  </h3>
 </div>
 <pre>this.localState = {{ localState | json }}</pre>

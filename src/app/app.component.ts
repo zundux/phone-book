@@ -1,11 +1,7 @@
 /*
  * Angular 2 decorators and services
  */
-import {
-  Component,
-  OnInit,
-  ViewEncapsulation
-} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppState } from './app.service';
 
 /*
@@ -15,9 +11,7 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: [
-    './app.component.css'
-  ],
+  styleUrls: ['./app.component.css'],
   template: `
     <nav>
       <a [routerLink]=" ['./users'] " routerLinkActive="active">
@@ -58,23 +52,13 @@ import { AppState } from './app.service';
 })
 export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/angularclass-avatar.png';
-  public name = 'Angular 2 Webpack Starter';
-  public url = 'https://github.com/AngularClass/angular2-webpack-starter';
+  public name = 'Phone book - Angular 2';
+  public url = 'https://github.com/zundux/phone-book';
 
-  constructor(
-    public appState: AppState
-  ) {}
+  constructor( public appState: AppState ) {}
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
   }
 
 }
-
-/*
- * Please review the https://github.com/AngularClass/angular2-examples/ repo for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
- * For help or questions please contact us at @AngularClass on twitter
- * or our chat on Slack at https://AngularClass.com/slack-join
- */
