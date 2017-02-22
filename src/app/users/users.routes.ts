@@ -1,6 +1,9 @@
+import { RouterModule } from "@angular/router";
 import { UsersComponent } from './users.component';
 
-export const routes = [
+const usersRoutes = [
   // { path: 'users', component: UsersComponent },
-  // { path: 'users/:id', loadChildren: './user-detail#UserDetailModule' }
+  { path: 'users/:id', loadChildren: './user-detail#UserDetailModule' }
 ];
+
+export const UsersRouting = RouterModule.forChild(usersRoutes);

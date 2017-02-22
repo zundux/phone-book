@@ -1,9 +1,8 @@
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
-import { routes } from './users.routes';
+import { UsersRouting } from './users.routes';
 import { UsersComponent } from './users.component';
 
 @NgModule({
@@ -11,12 +10,9 @@ import { UsersComponent } from './users.component';
     UsersComponent,
   ],
   imports: [
-    // RouterModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes),
+    UsersRouting
   ],
 })
-export class UsersModule {
-  // public static routes = routes;
-}
+export class UsersModule {}

@@ -20,7 +20,7 @@ import { AppState, InternalStateType }  from './app.service';
 
 import { UsersModule }          from './users';
 // import { UsersComponent }       from './users/users.component';
-// import { UserService }          from './core/service/user.service';
+import { UserService }          from './core/service/user.service';
 //
 // import { HomeComponent }        from './home';
 // import { AboutComponent }       from './about';
@@ -57,8 +57,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    UsersModule,
-
+    // UsersModule,
 
     InMemoryWebApiModule.forRoot(InMemoryDataService),
 
@@ -69,7 +68,7 @@ type StoreType = {
     ENV_PROVIDERS,
     APP_PROVIDERS,
 
-    // UserService
+    UserService
   ],
   bootstrap: [ AppComponent ]
 })
