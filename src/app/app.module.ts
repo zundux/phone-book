@@ -12,20 +12,20 @@ import { InMemoryDataService }  from './fixture/in-memory-data.service';
  * Platform and Environment providers/directives/pipes
  */
 import { ENV_PROVIDERS }                from './environment';
-import { AppRoutingModule }             from './app.routes.module';
+import { AppRoutingModule, routedComponents } from './app.routes.module';
 // App is our top level component
 import { AppComponent }                 from './app.component';
 import { APP_RESOLVER_PROVIDERS }       from './app.resolver';
 import { AppState, InternalStateType }  from './app.service';
 
-import { UsersComponent }       from './users';
-
-import { HomeComponent }        from './home';
-import { AboutComponent }       from './about';
-import { NoContentComponent }   from './no-content';
+import { UsersModule }          from './users';
+// import { UsersComponent }       from './users/users.component';
+// import { UserService }          from './core/service/user.service';
+//
+// import { HomeComponent }        from './home';
+// import { AboutComponent }       from './about';
+// import { NoContentComponent }   from './no-content';
 import { XLargeDirective }      from './home/x-large';
-
-import { UserService } from "./core/service/user.service";
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -48,19 +48,17 @@ type StoreType = {
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
+    XLargeDirective,
 
-    UsersComponent,
 
-    HomeComponent,
-    NoContentComponent,
-    XLargeDirective
+    routedComponents
   ],
   imports: [
-    // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
+    UsersModule,
+
 
     InMemoryWebApiModule.forRoot(InMemoryDataService),
 
@@ -71,7 +69,7 @@ type StoreType = {
     ENV_PROVIDERS,
     APP_PROVIDERS,
 
-    UserService
+    // UserService
   ],
   bootstrap: [ AppComponent ]
 })

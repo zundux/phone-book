@@ -4,8 +4,8 @@ import { Component, OnInit }        from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 
-import { UserService } from '../core/service/user.service';
-import { User } from '../core/model/user';
+import { UserService } from '../../core/service/user.service';
+import { User } from '../../core/model/user';
 
 @Component({
   selector: 'user-detail',

@@ -3,19 +3,20 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { routes } from './child-user-detail.routes';
-import { ChildDetailComponent } from './child-user-detail.component';
+import { routes } from './users.routes';
+import { UsersComponent } from './users.component';
 
 @NgModule({
   declarations: [
-    ChildDetailComponent,
+    UsersComponent,
   ],
   imports: [
+    // RouterModule,
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
   ],
 })
-export class ChildUserDetailModule {
-  public static routes = routes;
+export class UsersModule {
+  // public static routes = routes;
 }

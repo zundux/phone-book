@@ -1,13 +1,13 @@
-import {Component, OnInit}       from '@angular/core';
-import {ActivatedRoute, Router}  from '@angular/router';
+import { Component, OnInit }       from '@angular/core';
+import { ActivatedRoute, Router }  from '@angular/router';
 
-import {User}         from '../core/model/user';
-import {UserService}  from '../core/service/user.service';
+import { User }         from '../core/model/user';
+import { UserService }  from '../core/service/user.service';
 
 @Component({
-  selector: 'Users',
-  styleUrls: ['./users.component.css'],
-  templateUrl: './users.component.html'
+  selector: 'users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
   users: User[];
