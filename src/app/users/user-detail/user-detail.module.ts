@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-// import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-// import { routes } from './user-detail.routes';
+import { routes } from './user-detail.routes';
 import { UserDetailComponent } from './user-detail.component';
 
 @NgModule({
@@ -13,9 +13,9 @@ import { UserDetailComponent } from './user-detail.component';
   imports: [
     CommonModule,
     FormsModule,
-    // RouterModule.forChild(routes),
+    RouterModule.forChild(routes),
   ],
 })
 export class UserDetailModule {
-  // public static routes = routes;
+  public static routes = routes;
 }

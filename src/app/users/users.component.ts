@@ -13,8 +13,9 @@ export class UsersComponent implements OnInit {
   users: User[];
   selectedUser: User;
 
-  constructor(private router: Router,
-              private userService: UserService) {
+  constructor(
+    private router: Router,
+    private userService: UserService) {
   }
 
   ngOnInit(): void {
@@ -30,10 +31,9 @@ export class UsersComponent implements OnInit {
     this.selectedUser = user;
   }
 
-
-  // gotoDetail(): void {
-  //   this.router.navigate(['/user-detail', this.selectedUser.id]);
-  // }
+  gotoDetail(): void {
+    this.router.navigate(['/user-detail', this.selectedUser.id]);
+  }
 
   add(name: string): void {
     name = name.trim();

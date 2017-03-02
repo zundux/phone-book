@@ -18,8 +18,8 @@ import { AppComponent }                 from './app.component';
 import { APP_RESOLVER_PROVIDERS }       from './app.resolver';
 import { AppState, InternalStateType }  from './app.service';
 
-import { UsersModule }          from './users';
-// import { UsersComponent }       from './users/users.component';
+// import { UsersModule }          from './users';
+import { UsersComponent }       from './users/users.component';
 import { UserService }          from './core/service/user.service';
 //
 // import { HomeComponent }        from './home';
@@ -49,7 +49,6 @@ type StoreType = {
   declarations: [
     AppComponent,
     XLargeDirective,
-
 
     routedComponents
   ],
